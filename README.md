@@ -84,5 +84,5 @@ This project was built with a core focus on **User Experience (UX)**. Moving abr
 
 <div align="center">
   <br>
-  <b>Built from scratch with ❤️ by Daksh</b>
+  <b>Built by Daksh</b>
 </div>
