@@ -10,6 +10,13 @@
 
 A comprehensive, all-in-one platform built to simplify the journey of international students. From finding the perfect university to securing education loans and landing that crucial first job, GradGuide streamlines the entire process into one elegant dashboard.
 
+---
+
+## 📸 App Preview
+Here's a preview of the GradGuide dashboard:
+
+![GradGuide Dashboard Preview](client/public/preview.png)
+
 </div>
 
 ---
