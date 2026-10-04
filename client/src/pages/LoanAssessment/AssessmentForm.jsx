@@ -146,7 +146,7 @@ export default function AssessmentForm({ onSuccess }) {
             </div>
             <div className="form-group">
               <label className="form-label">University Global Rank (if known)</label>
-              <input type="number" className="form-input" value={formData.university_rank} onChange={(e) => handleChange('root', 'university_rank', e.target.value)} placeholder="e.g. 15" />
+              <input type="number" min="0" className="form-input" value={formData.university_rank} onChange={(e) => handleChange('root', 'university_rank', e.target.value)} placeholder="e.g. 15" />
               <p className="text-xs text-gray-500 mt-1">Some lenders offer non-collateral loans for Top 100 ranked universities.</p>
             </div>
             <div className="form-group">
@@ -155,7 +155,7 @@ export default function AssessmentForm({ onSuccess }) {
             </div>
             <div className="form-group">
               <label className="form-label">Duration (Years)</label>
-              <input type="number" step="0.5" className="form-input" value={formData.study.duration_years} onChange={(e) => handleChange('study', 'duration_years', e.target.value)} />
+              <input type="number" min="0" step="0.5" className="form-input" value={formData.study.duration_years} onChange={(e) => handleChange('study', 'duration_years', e.target.value)} />
             </div>
             <div className="form-group">
               <label className="form-label">Gender</label>
@@ -168,11 +168,11 @@ export default function AssessmentForm({ onSuccess }) {
             </div>
             <div className="form-group">
               <label className="form-label">Tuition Fee (Per Year) [INR]</label>
-              <input type="number" className="form-input" value={formData.study.tuition_per_year} onChange={(e) => handleChange('study', 'tuition_per_year', e.target.value)} />
+              <input type="number" min="0" className="form-input" value={formData.study.tuition_per_year} onChange={(e) => handleChange('study', 'tuition_per_year', e.target.value)} />
             </div>
             <div className="form-group">
               <label className="form-label">Living Cost (Per Year) [INR]</label>
-              <input type="number" className="form-input" value={formData.study.living_cost_per_year} onChange={(e) => handleChange('study', 'living_cost_per_year', e.target.value)} />
+              <input type="number" min="0" className="form-input" value={formData.study.living_cost_per_year} onChange={(e) => handleChange('study', 'living_cost_per_year', e.target.value)} />
             </div>
           </div>
         );
@@ -181,19 +181,19 @@ export default function AssessmentForm({ onSuccess }) {
           <div className="grid-2 animate-[fadeIn_0.3s_ease]">
             <div className="form-group">
               <label className="form-label">Personal Savings [INR]</label>
-              <input type="number" className="form-input" value={formData.funding.savings} onChange={(e) => handleChange('funding', 'savings', e.target.value)} />
+              <input type="number" min="0" className="form-input" value={formData.funding.savings} onChange={(e) => handleChange('funding', 'savings', e.target.value)} />
             </div>
             <div className="form-group">
               <label className="form-label">Scholarships [INR]</label>
-              <input type="number" className="form-input" value={formData.funding.scholarship} onChange={(e) => handleChange('funding', 'scholarship', e.target.value)} />
+              <input type="number" min="0" className="form-input" value={formData.funding.scholarship} onChange={(e) => handleChange('funding', 'scholarship', e.target.value)} />
             </div>
             <div className="form-group">
               <label className="form-label">Fees Already Paid [INR]</label>
-              <input type="number" className="form-input" value={formData.funding.fees_paid} onChange={(e) => handleChange('funding', 'fees_paid', e.target.value)} />
+              <input type="number" min="0" className="form-input" value={formData.funding.fees_paid} onChange={(e) => handleChange('funding', 'fees_paid', e.target.value)} />
             </div>
             <div className="form-group">
               <label className="form-label">Family Contribution [INR]</label>
-              <input type="number" className="form-input" value={formData.funding.family_contribution} onChange={(e) => handleChange('funding', 'family_contribution', e.target.value)} />
+              <input type="number" min="0" className="form-input" value={formData.funding.family_contribution} onChange={(e) => handleChange('funding', 'family_contribution', e.target.value)} />
             </div>
           </div>
         );
@@ -202,11 +202,11 @@ export default function AssessmentForm({ onSuccess }) {
           <div className="grid-2 animate-[fadeIn_0.3s_ease]">
             <div className="form-group">
               <label className="form-label">Co-applicant Annual Income [INR]</label>
-              <input type="number" className="form-input" value={formData.financial.annual_income} onChange={(e) => handleChange('financial', 'annual_income', e.target.value)} />
+              <input type="number" min="0" className="form-input" value={formData.financial.annual_income} onChange={(e) => handleChange('financial', 'annual_income', e.target.value)} />
             </div>
             <div className="form-group">
               <label className="form-label">Co-applicant CIBIL Score</label>
-              <input type="number" className="form-input" value={formData.financial.cibil_score} onChange={(e) => handleChange('financial', 'cibil_score', e.target.value)} placeholder="e.g. 750" />
+              <input type="number" min="0" className="form-input" value={formData.financial.cibil_score} onChange={(e) => handleChange('financial', 'cibil_score', e.target.value)} placeholder="e.g. 750" />
             </div>
             <div className="form-group">
               <label className="form-label">Co-applicant Employment Type</label>
@@ -218,11 +218,11 @@ export default function AssessmentForm({ onSuccess }) {
             </div>
             <div className="form-group">
               <label className="form-label">Total Liabilities / Existing Loans [INR]</label>
-              <input type="number" className="form-input" value={formData.financial.total_liabilities} onChange={(e) => handleChange('financial', 'total_liabilities', e.target.value)} />
+              <input type="number" min="0" className="form-input" value={formData.financial.total_liabilities} onChange={(e) => handleChange('financial', 'total_liabilities', e.target.value)} />
             </div>
             <div className="form-group">
               <label className="form-label">Total Assets (Excluding Property) [INR]</label>
-              <input type="number" className="form-input" value={formData.financial.total_assets} onChange={(e) => handleChange('financial', 'total_assets', e.target.value)} />
+              <input type="number" min="0" className="form-input" value={formData.financial.total_assets} onChange={(e) => handleChange('financial', 'total_assets', e.target.value)} />
             </div>
           </div>
         );
@@ -258,11 +258,11 @@ export default function AssessmentForm({ onSuccess }) {
                 </div>
                 <div className="form-group">
                   <label className="form-label">Estimated Property Value [INR]</label>
-                  <input type="number" className="form-input" value={formData.collateral.property_value} onChange={(e) => handleChange('collateral', 'property_value', e.target.value)} />
+                  <input type="number" min="0" className="form-input" value={formData.collateral.property_value} onChange={(e) => handleChange('collateral', 'property_value', e.target.value)} />
                 </div>
                 <div className="form-group">
                   <label className="form-label">Existing Mortgage/Loan on Property [INR]</label>
-                  <input type="number" className="form-input" value={formData.collateral.existing_mortgage} onChange={(e) => handleChange('collateral', 'existing_mortgage', e.target.value)} />
+                  <input type="number" min="0" className="form-input" value={formData.collateral.existing_mortgage} onChange={(e) => handleChange('collateral', 'existing_mortgage', e.target.value)} />
                 </div>
               </div>
             )}

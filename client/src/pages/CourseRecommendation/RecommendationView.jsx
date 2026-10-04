@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowLeft, CheckCircle2, MapPin, DollarSign, Calendar, TrendingUp, Info, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, MapPin, DollarSign, Calendar, TrendingUp, Info, ChevronDown, ChevronUp, GraduationCap, Briefcase, LineChart } from 'lucide-react';
 import { coursesAPI } from '../../services/api';
 import toast from 'react-hot-toast';
 
@@ -125,23 +125,32 @@ export default function RecommendationView({ profile, recommendations, onReset }
                     </div>
 
                     <div>
-                      <div className="bg-gray-800/50 rounded-lg p-5 border border-gray-700 mb-6">
-                        <h4 className="font-semibold text-white mb-4">Requirements & Outcomes</h4>
+                      <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-xl p-6 border border-gray-700/60 shadow-lg mb-6 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl"></div>
+                        <h4 className="font-bold text-white mb-5 text-lg">Requirements & Outcomes</h4>
                         
-                        <div className="space-y-4">
-                          <div>
-                            <div className="text-xs text-gray-400 uppercase">Eligibility</div>
-                            <div className="text-sm text-gray-200">{course.eligibility}</div>
+                        <div className="space-y-6 relative z-10">
+                          <div className="bg-gray-800/40 p-4 rounded-lg border border-gray-700/50">
+                            <div className="text-xs font-bold tracking-wider text-gray-400 uppercase mb-2 flex items-center gap-2">
+                              <GraduationCap size={16} className="text-orange-400"/> Eligibility
+                            </div>
+                            <div className="text-sm text-gray-200 leading-relaxed font-medium">{course.eligibility}</div>
                           </div>
-                          <div>
-                            <div className="text-xs text-gray-400 uppercase">Work Permit Options</div>
-                            <div className="text-sm text-green-400">{course.work_permit_info}</div>
+                          <div className="bg-gray-800/40 p-4 rounded-lg border border-gray-700/50">
+                            <div className="text-xs font-bold tracking-wider text-gray-400 uppercase mb-2 flex items-center gap-2">
+                              <Briefcase size={16} className="text-green-400"/> Work Permit Options
+                            </div>
+                            <div className="text-sm text-green-300 font-medium">{course.work_permit_info}</div>
                           </div>
-                          <div>
-                            <div className="text-xs text-gray-400 uppercase mb-1">Career Outcomes</div>
+                          <div className="bg-gray-800/40 p-4 rounded-lg border border-gray-700/50">
+                            <div className="text-xs font-bold tracking-wider text-gray-400 uppercase mb-3 flex items-center gap-2">
+                              <LineChart size={16} className="text-blue-400"/> Career Outcomes
+                            </div>
                             <div className="flex flex-wrap gap-2">
                               {course.career_outcomes.map(c => (
-                                <span key={c} className="tag">{c}</span>
+                                <span key={c} className="px-3 py-1.5 bg-blue-500/10 text-blue-300 border border-blue-500/20 rounded-full text-xs font-semibold tracking-wide shadow-sm">
+                                  {c}
+                                </span>
                               ))}
                             </div>
                           </div>

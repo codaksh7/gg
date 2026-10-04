@@ -115,7 +115,7 @@ export default function ProfileForm({ onSuccess }) {
           <div className="form-group">
             <label className="form-label">Current GPA (out of 4.0)</label>
             <input 
-              type="number" 
+              type="number" min="0" 
               step="0.1" 
               min="0" 
               max="4.0" 
@@ -132,7 +132,7 @@ export default function ProfileForm({ onSuccess }) {
           <div className="form-group">
             <label className="form-label flex items-center gap-2"><DollarSign size={16}/> Max Annual Tuition Budget (USD)</label>
             <input 
-              type="number" 
+              type="number" min="0" 
               className="form-input" 
               name="budget_max" 
               value={formData.budget_max} 
