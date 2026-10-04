@@ -12,10 +12,14 @@ A comprehensive, all-in-one platform built to simplify the journey of internatio
 
 ---
 
-## 📸 App Preview
-Here's a preview of the GradGuide dashboard:
+## 🎥 Video Demonstration
+Check out the full walkthrough of GradGuide's features:
 
-![GradGuide Dashboard Preview](client/public/preview.png)
+**[▶️ Watch or Download the Video Demo](https://github.com/codaksh7/gg/raw/main/Video-Demo.mp4)**
+
+<video src="https://github.com/codaksh7/gg/raw/main/Video-Demo.mp4" controls="controls" style="max-width: 100%;">
+  Your browser does not support the video tag.
+</video>
 
 </div>
 
